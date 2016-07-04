@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	#RewriteBase /grupomichel/livrodereceita.com
+	#RewriteRule ^busca/([^/]*)\.html$ buscar.php?q=$1&x=0&y=0 [L]
+	RewriteRule ^contato/$ contato.php [L]
+	RewriteRule ^livro/$ livro.php [L]
+
+	
+	RewriteRule ^noticias/([^/]*)\.html$ noticias.php?idnoticia=$1 [L]
+	RewriteRule ^usuario/([^/]*)$ usuario.php?id=$1 [L]
+
+	
+	RewriteRule ^receitas/([^/]*)/([^/]*)\.html$ ver-receita.php?id=$2 [L] 
+	RewriteRule ^([^/]*)/$ categorias.php?idc=$1 [L] 
+	RewriteRule ^([^/]*)/([^/]*)/$ subcategorias.php?idc=$1&ids=$2 [L] 
+	
+ 
+	RewriteRule ^c/([^/]*)/([0-9]*)$ categorias.php?idc=$1&pg=$2 [L]
+	RewriteRule ^s/([^/]*)/([^/]*)/([0-9]*)$ subcategorias.php?idc=$1&ids=$2&pg=$3 [L]
+	
+
+	
+</IfModule>
+
+ 
+
+ 
+
+
